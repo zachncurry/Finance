@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome {{username}}
+{% endblock %}
+
+{% block main %}
+<h5 style="float:left;">Balance: {{total}}</h5>
+
+
+<form action="/history"method="post"></form>
+    <button class="accordion">My Wallet </button>
+	<div class="panel">
+	<p>
+	<ul>{%for quote in quotes%}
+	<li>{{stock}}{{quotes}}</li>
+	{% endfor%}
+	</ul>
+	</p>
+	</div>
+
+	</form>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var panel = this.nextElementSibling;
+		    if (panel.style.maxHeight){
+		      panel.style.maxHeight = null;
+		    }
+		    else {
+		      panel.style.maxHeight = panel.scrollHeight + "px";
+		    }
+		  });
+		}
+</script>
+
+
+{% endblock %}

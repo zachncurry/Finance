@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome {{username}}
+{% endblock %}
+
+{% block main %}
+
+
+ <div style="float:left;border-style:outset;border-color:#1E90FF;width:38%;">
+     <h3>Sell Stock</h3>
+<form action="/sell" method="post">
+          <input style="width:150px;" class="symbol" type="text" name="symbol" placeholder="Stock Ticker"><br>
+          <input style="width:150px;margin-top:5%;" type="test" name="quantity" placeholder="Quantity"><br>
+
+        <br>
+        <br>
+
+        <button style="width:150px;margin-top:10px;" class="button">Sell</button><br>
+      </form><br>
+    </div>
+
+
+{% endblock %}

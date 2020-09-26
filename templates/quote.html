@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome {{username}}
+{% endblock %}
+
+{% block main %}
+
+
+    <div style="float:left;border-style:outset;border-color:#1E90FF;width:38%;">
+    <h3>Get Quote</h3>
+        <form action="/quote" method="post" style="margin-top:10px;float:left;">
+        <div class="info" style="float: left;">
+        <input name="symbol" style="margin-left:1%; margin-top:5%; width:60%;" class="symbolq" type="text" placeholder="Stock Ticker">
+        <input name="submit" type="submit" style="margin-top:1%; margin-left:1%; width:35%;" class="button">
+        <br>
+        </form>
+        </div>
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+
+
+{% endblock %}

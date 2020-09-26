@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Welcome {{username}}
+{% endblock %}
+
+{% block main %}
+
+ <div style="float:left;border-style:outset;border-color:#1E90FF;width:38%;">
+    <h3>Quote</h3>
+   <br>
+   <br>
+   {{quote}}<br><br>
+
+   <h5 style="float:left;margin-left:1%;">Ticker Symbol:</h5>{{Symbol}}<br>
+<br>
+   <h5 style="float:left;margin-left:1%;">Name:</h5>{{Name}}<br>
+<br>
+   <h5 style="float:left;margin-left:1%;">Quote Price:</h5>{{Price}}</h5><br>
+
+   <br>
+   <br>
+   </div>
+
+
+{% endblock %}

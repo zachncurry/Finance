@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+
+<script>
+//REFERENCE: Check password function: https://www.geeksforgeeks.org/password-matching-using-javascript/
+            // Function to check if both passwords match
+            function checkPassword(form) {
+                password = form.password.value;
+                password2 = form.password2.value;
+
+                // If password not entered
+                if (password == '')
+                    alert ("Please Enter Password");
+
+                // If confirm password not entered
+                else if (password2 == '')
+                    alert ("Please Enter Confirm Password");
+
+                // If not same return False.
+                if (password != password2) {
+                    alert ("Password did not match: Please try again...")
+                    return false;
+                }
+
+                // If same return True.
+                else{
+                    alert("Password Match: Welcome to CS50 Finance Flask Application!")
+                    return true;
+                }
+            }
+        </script>
+      <form action="/register" method="post" onSubmit = "return checkPassword(this">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+         <div class="form-group">
+            <input class="form-control" name="password2" placeholder="Confirm Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Create Account</button>
+    </form>
+{% endblock %}
